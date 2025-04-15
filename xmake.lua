@@ -1,4 +1,4 @@
-set_project("LearnDX12")
+set_project("X-D3D12")
 set_version("0.1.0")
 
 set_arch("x64")
