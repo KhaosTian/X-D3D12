@@ -12,7 +12,7 @@ target("D3D12")
     set_runtimes("MD")
 
     add_defines("_WINDOWS", "UNICODE")
-    add_syslinks("user32", "gdi32" , "d3d12", "dxgi")
+    add_syslinks("user32", "gdi32" , "d3d12", "dxgi", "dxguid", "d3dcompiler")
 
     if is_mode("debug") then
         add_defines("_DEBUG")
