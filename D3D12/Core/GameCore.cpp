@@ -8,96 +8,83 @@
 //
 // Developed by Minigraph
 //
-// Author:  James Stanard 
+// Author:  James Stanard
 //
 
 #include "pch.h"
 #include "GameCore.h"
 
-#pragma comment(lib, "runtimeobject.lib") 
+#pragma comment(lib, "runtimeobject.lib")
 
-namespace GameCore
-{
-    void InitializeApplication( IGameApp& game )
-    {
-        game.Startup();
-    }
+namespace GameCore {
+void InitializeApplication(IGameApp& game) {
+    game.Startup();
+}
 
-    void TerminateApplication( IGameApp& game )
-    {
-        game.Cleanup();
-    }
+void TerminateApplication(IGameApp& game) {
+    game.Cleanup();
+}
 
-    void UpdateApplication( IGameApp& game )
-    {
-        game.Update(1);
-        game.RenderScene();
-    }
+void UpdateApplication(IGameApp& game) {
+    game.Update(1);
+    game.RenderScene();
+}
 
-    HWND g_hWnd = nullptr;
+HWND g_hWnd = nullptr;
 
-    LRESULT CALLBACK WndProc( HWND, UINT, WPARAM, LPARAM );
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-    void RunApplication( IGameApp& app, HINSTANCE hInst, const wchar_t* className)
-    {
+void RunApplication(IGameApp& app, HINSTANCE hInst, const wchar_t* className) {
+    Microsoft::WRL::Wrappers::RoInitializeWrapper InitializeWinRT(RO_INIT_MULTITHREADED);
+    //ASSERT_SUCCEEDED(InitializeWinRT);
 
-        Microsoft::WRL::Wrappers::RoInitializeWrapper InitializeWinRT(RO_INIT_MULTITHREADED);
-        //ASSERT_SUCCEEDED(InitializeWinRT);
+    // Register class
+    WNDCLASSEX wcex;
+    wcex.cbSize        = sizeof(WNDCLASSEX);
+    wcex.style         = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc   = WndProc;
+    wcex.cbClsExtra    = 0;
+    wcex.cbWndExtra    = 0;
+    wcex.hInstance     = hInst;
+    wcex.hIcon         = LoadIcon(hInst, IDI_APPLICATION);
+    wcex.hCursor       = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.lpszMenuName  = nullptr;
+    wcex.lpszClassName = className;
+    wcex.hIconSm       = LoadIcon(hInst, IDI_APPLICATION);
+    RegisterClassEx(&wcex);
+    //ASSERT(0 != RegisterClassEx(&wcex), "Unable to register a window");
 
-        // Register class
-        WNDCLASSEX wcex;
-        wcex.cbSize = sizeof(WNDCLASSEX);
-        wcex.style = CS_HREDRAW | CS_VREDRAW;
-        wcex.lpfnWndProc = WndProc;
-        wcex.cbClsExtra = 0;
-        wcex.cbWndExtra = 0;
-        wcex.hInstance = hInst;
-        wcex.hIcon = LoadIcon(hInst, IDI_APPLICATION);
-        wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
-        wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-        wcex.lpszMenuName = nullptr;
-        wcex.lpszClassName = className;
-        wcex.hIconSm = LoadIcon(hInst, IDI_APPLICATION);
-        RegisterClassEx(&wcex);
-        //ASSERT(0 != RegisterClassEx(&wcex), "Unable to register a window");
+    // Create window
+    RECT rc = { 0, 0, (LONG)800, (LONG)600 };
+    AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
 
-        // Create window
-        RECT rc = { 0, 0, (LONG)800, (LONG)600 };
-        AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
+    g_hWnd = CreateWindow(className, className, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, nullptr, nullptr, hInst, nullptr);
 
-        g_hWnd = CreateWindow(className, className, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
-            rc.right - rc.left, rc.bottom - rc.top, nullptr, nullptr, hInst, nullptr);
+    //ASSERT(g_hWnd != 0);
 
-        //ASSERT(g_hWnd != 0);
+    InitializeApplication(app);
 
-        InitializeApplication(app);
+    ShowWindow(g_hWnd, SW_SHOWDEFAULT);
 
-        ShowWindow( g_hWnd, SW_SHOWDEFAULT );
-
-        MSG msg = {};
-        while(msg.message!=WM_QUIT)
-        {
-            if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
-            {
-                TranslateMessage(&msg);
-                DispatchMessage(&msg);
-            }
-            else
-            {
-                UpdateApplication(app);
-            }
+    MSG msg = {};
+    while (msg.message != WM_QUIT) {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        } else {
+            UpdateApplication(app);
         }
-
-        TerminateApplication(app);
     }
 
-    //--------------------------------------------------------------------------------------
-    // Called every time the application receives a message
-    //--------------------------------------------------------------------------------------
-    LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
-    {
-        switch( message )
-        {
+    TerminateApplication(app);
+}
+
+//--------------------------------------------------------------------------------------
+// Called every time the application receives a message
+//--------------------------------------------------------------------------------------
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
+    switch (message) {
         case WM_SIZE:
             break;
 
@@ -106,10 +93,10 @@ namespace GameCore
             break;
 
         default:
-            return DefWindowProc( hWnd, message, wParam, lParam );
-        }
-
-        return 0;
+            return DefWindowProc(hWnd, message, wParam, lParam);
     }
 
+    return 0;
 }
+
+} // namespace GameCore
