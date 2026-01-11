@@ -15,7 +15,9 @@
 
 #pragma warning(disable : 4201) // nonstandard extension used : nameless struct/union
 #pragma warning(disable : 4238) // nonstandard extension used : class rvalue used as lvalue
-#pragma warning(disable : 4239) // A non-const reference may only be bound to an lvalue; assignment operator takes a reference to non-const
+#pragma warning( \
+    disable : 4239 \
+) // A non-const reference may only be bound to an lvalue; assignment operator takes a reference to non-const
 #pragma warning(disable : 4324) // structure was padded due to __declspec(align())
 
 #include <winsdkver.h>
@@ -51,8 +53,6 @@
 #ifdef _DEBUG
     #include <dxgidebug.h>
 #endif
-
-#include <combaseapi.h>
 
 #define D3D12_GPU_VIRTUAL_ADDRESS_NULL ((D3D12_GPU_VIRTUAL_ADDRESS)0)
 #define D3D12_GPU_VIRTUAL_ADDRESS_UNKNOWN ((D3D12_GPU_VIRTUAL_ADDRESS) - 1)

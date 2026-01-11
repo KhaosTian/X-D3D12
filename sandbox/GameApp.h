@@ -1,8 +1,10 @@
 ﻿#pragma once
 
-#include "Core/GameCore.h"
+#include "GameCore.h"
 
-class GameApp: public GameCore::IGameApp {
+using GameCore::IGameApp;
+
+class GameApp: public IGameApp {
 public:
     GameApp(void) = default;
 

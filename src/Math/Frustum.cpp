@@ -13,7 +13,6 @@
 
 #include "pch.h"
 #include "Frustum.h"
-//#include "Camera.h"
 
 using namespace Math;
 
@@ -59,12 +58,12 @@ void Frustum::ConstructOrthographicFrustum(float Left, float Right, float Top, f
     m_FrustumCorners[kFarUpperRight]  = Vector3(Right, Top, -Back); // Far upper right
 
     // Define the bounding planes
-    m_FrustumPlanes[kNearPlane]   = BoundingPlane(0.0f, 0.0f, -1.0f, -Front);
-    m_FrustumPlanes[kFarPlane]    = BoundingPlane(0.0f, 0.0f, 1.0f, Back);
+    m_FrustumPlanes[kNearPlane]   = BoundingPlane(0.0f, 0.0f, 1.0f, -Front);
+    m_FrustumPlanes[kFarPlane]    = BoundingPlane(0.0f, 0.0f, -1.0f, Back);
     m_FrustumPlanes[kLeftPlane]   = BoundingPlane(1.0f, 0.0f, 0.0f, -Left);
     m_FrustumPlanes[kRightPlane]  = BoundingPlane(-1.0f, 0.0f, 0.0f, Right);
-    m_FrustumPlanes[kTopPlane]    = BoundingPlane(0.0f, -1.0f, 0.0f, Bottom);
-    m_FrustumPlanes[kBottomPlane] = BoundingPlane(0.0f, 1.0f, 0.0f, -Top);
+    m_FrustumPlanes[kBottomPlane] = BoundingPlane(0.0f, 1.0f, 0.0f, -Bottom);
+    m_FrustumPlanes[kTopPlane]    = BoundingPlane(0.0f, -1.0f, 0.0f, Top);
 }
 
 Frustum::Frustum(const Matrix4& ProjMat) {

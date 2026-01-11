@@ -8,7 +8,7 @@
 //
 // Developed by Minigraph
 //
-// Author:  James Stanard
+// Author:  James Stanard 
 //
 
 #include "pch.h"
@@ -16,15 +16,18 @@
 
 using namespace Math;
 
-BoundingSphere BoundingSphere::Union(const BoundingSphere& rhs) {
+BoundingSphere BoundingSphere::Union( const BoundingSphere& rhs )
+{
     float radA = GetRadius();
-    if (radA == 0.0f) return rhs;
+    if (radA == 0.0f)
+        return rhs;
 
     float radB = rhs.GetRadius();
-    if (radB == 0.0f) return *this;
+    if (radB == 0.0f)
+        return *this;
 
     Vector3 diff = GetCenter() - rhs.GetCenter();
-    float   dist = Length(diff);
+    float dist = Length(diff);
 
     // Safe normalize vector between sphere centers
     diff = dist < 1e-6f ? Vector3(kXUnitVector) : diff * Recip(dist);
