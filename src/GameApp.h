@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "GameCore.h"
+#include "Core/GameCore.h"
 
 class GameApp: public GameCore::IGameApp {
 public:
