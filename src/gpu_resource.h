@@ -1,4 +1,7 @@
 #pragma once
+#include <d3d12.h>
+#include <cstdint>
+#include <wrl/client.h>
 
 
 class gpu_resource_c {
@@ -15,6 +18,8 @@ public:
         : m_gpu_virtual_address(D3D12_GPU_VIRTUAL_ADDRESS_NULL),
           m_usage_state(D3D12_RESOURCE_STATE_COMMON),
           m_transitioning_state((D3D12_RESOURCE_STATES)-1) {}
+
+    ~gpu_resource_c() { destroy(); }
 
     virtual void destroy() {
         m_resource = nullptr;
