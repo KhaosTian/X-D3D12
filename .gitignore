@@ -31,6 +31,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+Binaries/
+Intermediate/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -398,9 +400,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
-# xmake
-build/
-.xmake/
-vsxmake*/
-.vscode/

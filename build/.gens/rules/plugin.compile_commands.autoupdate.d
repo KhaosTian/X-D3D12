@@ -1,0 +1,40 @@
+{
+    files = {
+        [[D:\Workspace\X-D3D12\xmake.lua]],
+        [[D:\Workspace\X-D3D12\src\xmake.lua]],
+        [[D:\Workspace\X-D3D12\sandbox\xmake.lua]],
+        [[D:\Workspace\X-D3D12\.xmake\windows\x64\xmake.conf]]
+    },
+    values = {
+        [[sandbox\GameApp.cpp]],
+        [[sandbox\GameApp.h]],
+        [[sandbox\main.cpp]],
+        [[src\GameCore.cpp]],
+        [[src\GameCore.h]],
+        [[src\GraphicsCore.cpp]],
+        [[src\GraphicsCore.h]],
+        [[src\Math\BoundingBox.h]],
+        [[src\Math\BoundingPlane.h]],
+        [[src\Math\BoundingSphere.cpp]],
+        [[src\Math\BoundingSphere.h]],
+        [[src\Math\Common.h]],
+        [[src\Math\Frustum.cpp]],
+        [[src\Math\Frustum.h]],
+        [[src\Math\Matrix3.h]],
+        [[src\Math\Matrix4.h]],
+        [[src\Math\Quaternion.h]],
+        [[src\Math\Random.cpp]],
+        [[src\Math\Random.h]],
+        [[src\Math\Scalar.h]],
+        [[src\Math\Transform.h]],
+        [[src\Math\Vector.h]],
+        [[src\Utility.cpp]],
+        [[src\Utility.h]],
+        [[src\VectorMath.h]],
+        [[src\d3dx12.h]],
+        [[src\gpu_resource.cpp]],
+        [[src\gpu_resource.h]],
+        [[src\pch.cpp]],
+        [[src\pch.h]]
+    }
+}
