@@ -1,0 +1,51 @@
+[
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\Display.cpp.obj", "src\\core\\Display.cpp"],
+  "file": "src\\core\\Display.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\GameCore.cpp.obj", "src\\core\\GameCore.cpp"],
+  "file": "src\\core\\GameCore.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\GraphicsCore.cpp.obj", "src\\core\\GraphicsCore.cpp"],
+  "file": "src\\core\\GraphicsCore.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\Math\\BoundingSphere.cpp.obj", "src\\core\\Math\\BoundingSphere.cpp"],
+  "file": "src\\core\\Math\\BoundingSphere.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\Math\\Frustum.cpp.obj", "src\\core\\Math\\Frustum.cpp"],
+  "file": "src\\core\\Math\\Frustum.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\Math\\Random.cpp.obj", "src\\core\\Math\\Random.cpp"],
+  "file": "src\\core\\Math\\Random.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\pch.cpp.obj", "src\\core\\pch.cpp"],
+  "file": "src\\core\\pch.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/YuD:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/FID:\\Workspace\\X-D3D12\\build\\.gens\\core\\windows\\x64\\release\\src\\core\\pch.h", "/Isrc\\core", "/D_WINDOWS", "/DUNICODE", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\core\\windows\\x64\\release\\src\\core\\Utility.cpp.obj", "src\\core\\Utility.cpp"],
+  "file": "src\\core\\Utility.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/Isrc\\core", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\sandbox\\windows\\x64\\release\\src\\sandbox\\GameApp.cpp.obj", "src\\sandbox\\GameApp.cpp"],
+  "file": "src\\sandbox\\GameApp.cpp"
+},
+{
+  "directory": "D:\\Workspace\\X-D3D12",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/MD", "/O2", "/std:c++20", "/Isrc\\core", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\sandbox\\windows\\x64\\release\\src\\sandbox\\main.cpp.obj", "src\\sandbox\\main.cpp"],
+  "file": "src\\sandbox\\main.cpp"
+}]

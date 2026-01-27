@@ -1,0 +1,6 @@
+target("sandbox")
+    set_kind("binary")
+    add_files("**.cpp")
+    add_headerfiles("**.h")
+    add_deps("core")
+target_end()
